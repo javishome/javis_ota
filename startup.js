@@ -28,17 +28,7 @@ window.onload = ()=>{
     let unique = '?rand='+Math.random();
     
     window.components = [
-        { name:'device', path: window.root+'vue/device.vue'+unique },
         { name:'ota', path: window.root+'vue/ota.vue'+unique },
-        { name:'filesystem', path: window.root+'vue/filesystem.vue'+unique },
-        { name:'info', path: window.root+'vue/info.vue'+unique },
-        { name:'flash', path: window.root+'vue/flash.vue'+unique },
-        { name:'control', path: window.root+'vue/control.vue'+unique },
-        { name:'tools', path: window.root+'vue/tools.vue'+unique },
-        { name:'import', path: window.root+'vue/import.vue'+unique },
-        { name:'logs', path: window.root+'vue/logs.vue'+unique },
-        { name:'gpioDoctor', path: window.root+'vue/gpioDoctor.vue'+unique },
-        { name:'myComponent', path: window.root+'vue/myComponent.vue'+unique },
     ];
 
     let numcomponents = 0;
