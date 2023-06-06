@@ -2,16 +2,7 @@
     <div class="fullscreen">
     <!-- Tab links -->
     <div class="tab">
-      <button :class="'tablinks '+Logsclass" @click="open($event, 'Logs')">Logs</button>
-      <button :class="'tablinks '+Configclass" @click="open($event, 'Config')">Config</button>
-      <button :class="'tablinks '+Statusclass" @click="open($event, 'Status')">Status</button>
       <button :class="'tablinks '+OTAclass" @click="open($event, 'OTA')">OTA</button>
-      <button :class="'tablinks '+Flashclass" @click="open($event, 'Flash')">Flash</button>
-      <button :class="'tablinks '+Toolsclass" @click="open($event, 'Tools')">Tools</button>
-      <button :class="'tablinks '+Importclass" @click="open($event, 'Import')">Import</button>
-      <button :class="'tablinks '+Filesystemclass" @click="open($event, 'Filesystem')">Filesystem</button>
-      <button :class="'tablinks '+GPIODoctorclass" @click="open($event, 'GPIODoctor')">GPIO Finder</button> 
-      <button :class="'tablinks '+Aboutclass" @click="open($event, 'About')">About</button>
     </div>
     
     <!-- Tab content -->
@@ -42,23 +33,6 @@
       <h3>OTA</h3>
       <ota-controller></ota-controller>
     </div>
-    <div class="tabcontent" v-if="tab === 'Tools'">
-      <h3>Tools (WORK IN PROGRESS, SOME BUTTONS MAY NOT BE READY)</h3>
-      <tools-controller></tools-controller>
-    </div>
-    <div class="tabcontent" v-if="tab === 'Flash'">
-      <h3>Flash</h3>
-      <flash-controller></flash-controller>
-    </div>
-    <div class="tabcontent" v-if="tab === 'Import'">
-      <h3>Import</h3>
-      <import-controller></import-controller>
-    </div>
-    <div class="tabcontent" v-if="tab === 'Filesystem'">
-      <h3>Filesystem</h3>
-      <filesystem-controller></filesystem-controller>
-    </div>
-
     <div class="tabcontent" v-if="tab === 'GPIODoctor'">
       <h3>GPIO Doctor - easily find GPIO roles for your relays, PWMs, and buttons (Work In Progress)</h3>
       <h6>Please also UPDATE OBK to latest version to get best experience, otherwise reading values won't work</h6>
@@ -71,14 +45,6 @@
   module.exports = {
   components: {
     'ota-controller': window.getComponent('ota'),
-    'filesystem-controller': window.getComponent('filesystem'),
-    'info-controller': window.getComponent('info'),
-    'flash-controller': window.getComponent('flash'),
-    'control-controller': window.getComponent('control'),
-    'logs-controller': window.getComponent('logs'),
-    'tools-controller': window.getComponent('tools'),
-    'import-controller': window.getComponent('import'),
-    'gpio-controller': window.getComponent('gpioDoctor'),
   },
       
     data: ()=>{
