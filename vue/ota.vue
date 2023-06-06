@@ -2,6 +2,8 @@
     <div>
         <div>
             <p>Chipset: {{chipset}}</p>
+            <p>Hardware: {{hardware}}</p>
+            <p>Version: {{version}}</p>
             <p>Build: {{build}}</p>
         </div>
         <div>
@@ -75,6 +77,8 @@
                 .then(res => {
                     this.build = res.build;
                     this.chipset = res.chipset;     //Set chipset to fixed value for testing
+                    this.hardware = res.hardware;
+                    this.version = res.version;
 
                     this.currentversion = this.build.split(' ').pop();
                     // only get releases the first time.
